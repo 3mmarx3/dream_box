@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dream Box</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+
+<div class="site-wrapper">
+  
+  <header class="top-navigation">
+    <div class="nav-content">
+      <div class="side-menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="brand-name">Dream Box</div>
+      <div class="action-icons">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="alert-bell">
+          <i class="fa-solid fa-bell"></i>
+        </div>
+        <button class="auth-btn">LOGIN</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-interface">
+    <div class="interface-header">
+      <button class="nav-back" onclick="moveBack()">←</button>
+      <div class="app-logo"></div>
+      <div class="step-indicator" id="stepDisplay">1/4</div>
+    </div>
+
+    <div class="d-flex">
+      <div id="countdownTimer" >30</div>
+
+    <div class="track-outer">
+      <div class="track-inner" id="trackFill"></div>
+
+    </div>
+
+    </div>
+
+    <div class="content-panel visible" id="step1">
+      <div class="reward-tag">
+        Welcome to the Premium Giveaway!<br>
+        A cash prize of <span class="gold-text">$5,000</span> is available!
+      </div>
+      <div class="options-grid">
+        <button onclick="moveNext()">Shopping Vouchers</button>
+        <button onclick="moveNext()">Cash Transfer</button>
+        <button onclick="moveNext()">Tech Gadgets</button>
+        <button onclick="moveNext()">Gift Cards</button>
+      </div>
+    </div>
+
+    <div class="content-panel" id="step2">
+        <div class="reward-tag">
+        Welcome to the Premium Giveaway!<br>
+        A cash prize of <span class="gold-text">$5,000</span> is available!
+      </div>
+      <div class="options-grid">
+        <button onclick="moveNext()">Daily Basis</button>
+        <button onclick="moveNext()">Once a Week</button>
+        <button onclick="moveNext()">Few times a Month</button>
+        <button onclick="moveNext()">First Time</button>
+      </div>
+    </div>
+
+    <div class="content-panel" id="step3">
+          <div class="reward-tag">
+        Welcome to the Premium Giveaway!<br>
+        A cash prize of <span class="gold-text">$5,000</span> is available!
+      </div>
+      <div class="options-grid">
+        <button onclick="moveNext()">Electronics</button>
+        <button onclick="moveNext()">Fashion</button>
+        <button onclick="moveNext()">Home Decor</button>
+        <button onclick="moveNext()">Health & Beauty</button>
+      </div>
+    </div>
+
+    <div class="content-panel" id="step4">
+        <div class="reward-tag">
+        Welcome to the Premium Giveaway!<br>
+        A cash prize of <span class="gold-text">$5,000</span> is available!
+      </div>
+      <div class="options-grid">
+        <button onclick="completeProcess()">Confirm Entry</button>
+        <button onclick="completeProcess()">Verify Now</button>
+      </div>
+    </div>
+    
+    <div class="status-overlay" id="waitStage1">
+      <div class="status-msg">Validating entry...</div>
+      <div class="spinner-ring"></div>
+    </div>
+
+    <div class="status-overlay" id="waitStage2">
+      <div class="status-msg">Generating your reward...</div>
+      <div class="spinner-ring"></div>
+    </div>
+
+    <div class="success-panel" id="winResult">
+      <h2 class="prompt-title">Verification Successful!</h2>
+      <div class="success-desc">
+        Your profile has been qualified for the final draw.<br>
+        Click the button below to secure your <strong>$5,000</strong> reward.
+      </div>
+      <button class="main-cta">
+        <a href="https://www.google.com/">WITHDRAW FUNDS NOW</a>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="./assets/js/app.js"></script>
+</body>
+</html>
