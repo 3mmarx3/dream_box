@@ -3,20 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dream Box</title>
+  <title>Dream Box | Exclusive Rewards & Cash Giveaways</title>
+  <meta name="description" content="Join the Dream Box giveaway for a chance to win $5,000 cash prizes, tech gadgets, and luxury gift cards. Quick verification and instant entry.">
+  <meta name="keywords" content="Dream Box, Cash Prizes, Win Money, Tech Giveaways, Gift Cards, Rewards Program">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
 
 <div class="site-wrapper">
-  
   <header class="top-navigation">
     <div class="nav-content">
       <div class="side-menu-icon">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </div>
       <div class="brand-name">Dream Box</div>
       <div class="action-icons">
@@ -33,91 +32,65 @@
     <div class="interface-header">
       <button class="nav-back" onclick="moveBack()">←</button>
       <div class="app-logo"></div>
-      <div class="step-indicator" id="stepDisplay">1/4</div>
+      <div class="step-indicator" id="stepDisplay">1/3</div>
     </div>
 
     <div class="d-flex">
-      <div id="countdownTimer" >30</div>
-
-    <div class="track-outer">
-      <div class="track-inner" id="trackFill"></div>
-
-    </div>
-
+      <div id="countdownTimer">30</div>
+      <div class="track-outer">
+        <div class="track-inner" id="trackFill"></div>
+      </div>
     </div>
 
     <div class="content-panel visible" id="step1">
       <div class="reward-tag">
-        Welcome to the Premium Giveaway!<br>
-        A cash prize of <span class="gold-text">$5,000</span> is available!
+        Exclusive Premium Opportunity!<br>
+        Current Jackpot: <span class="gold-text">$5,000</span> Available Now!
       </div>
-
-                  <h2 class="prompt-title">How many hours do you spend online daily?</h2>
-
+      <h2 class="prompt-title">Select Your Preferred Prize Category:</h2>
       <div class="options-grid">
+        <button onclick="moveNext()">Direct Cash Transfer</button>
+        <button onclick="moveNext()">Latest Apple Gadgets</button>
         <button onclick="moveNext()">Shopping Vouchers</button>
-        <button onclick="moveNext()">Cash Transfer</button>
-        <button onclick="moveNext()">Tech Gadgets</button>
-        <button onclick="moveNext()">Gift Cards</button>
       </div>
     </div>
 
     <div class="content-panel" id="step2">
-  
-
-                  <h2 class="prompt-title">How many hours do you spend online daily?</h2>
-
+      <h2 class="prompt-title">Are you a regular Dream Box user?</h2>
       <div class="options-grid">
-        <button onclick="moveNext()">Daily Basis</button>
-        <button onclick="moveNext()">Once a Week</button>
-        <button onclick="moveNext()">Few times a Month</button>
-        <button onclick="moveNext()">First Time</button>
+        <button onclick="moveNext()">Yes, I'm a Loyal Member</button>
+        <button onclick="moveNext()">Occasionally</button>
+        <button onclick="moveNext()">I'm New Here</button>
       </div>
     </div>
 
     <div class="content-panel" id="step3">
-     
-
-                  <h2 class="prompt-title">How many hours do you spend online daily?</h2>
-
+      <h2 class="prompt-title">Ready to secure your spot in the draw?</h2>
       <div class="options-grid">
-        <button onclick="moveNext()">Electronics</button>
-        <button onclick="moveNext()">Fashion</button>
-        <button onclick="moveNext()">Home Decor</button>
-        <button onclick="moveNext()">Health & Beauty</button>
-      </div>
-    </div>
-
-    <div class="content-panel" id="step4">
-  
-
-                  <h2 class="prompt-title">How many hours do you spend online daily?</h2>
-
-
-      <div class="options-grid">
-        <button onclick="completeProcess()">Confirm Entry</button>
-        <button onclick="completeProcess()">Verify Now</button>
+        <button onclick="completeProcess()">Confirm My Entry</button>
+        <button onclick="completeProcess()">Verify & Continue</button>
+        <button onclick="completeProcess()">Claim Now</button>
       </div>
     </div>
     
     <div class="status-overlay" id="waitStage1">
-      <div class="status-msg">Validating entry...</div>
+      <div class="status-msg">Analyzing your answers...</div>
       <div class="spinner-ring"></div>
     </div>
 
     <div class="status-overlay" id="waitStage2">
-      <div class="status-msg">Generating your reward...</div>
+      <div class="status-msg">Matching with available prizes...</div>
       <div class="spinner-ring"></div>
     </div>
 
     <div class="success-panel" id="winResult">
       <h2 class="prompt-title">Verification Successful!</h2>
       <div class="success-desc">
-        Your profile has been qualified for the final draw.<br>
-        Click the button below to secure your <strong>$5,000</strong> reward.
+        Congratulations! Your entry has been prioritized for the <strong>$5,000</strong> grand prize.<br>
+        Complete the final step to unlock your funds immediately.
       </div>
       <button class="main-cta">
-        <a href="https://www.google.com/">WITHDRAW FUNDS NOW</a>
+        <a id="finalLink" href="https://www.google.com/">CLAIM YOUR REWARD NOW</a>
       </button>
     </div>
   </div>
